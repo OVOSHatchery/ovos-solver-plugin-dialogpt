@@ -1,6 +1,6 @@
 # <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/robot.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> DialoGPT Persona
  
-Give Mycroft some sass with DialoGPT
+Give Mycroft some sass with [DialoGPT](https://github.com/microsoft/DialoGPT)
 
 While this can not compete with [ChatGPT Persona](https://github.com/OpenVoiceOS/ovos-solver-plugin-openai-persona) it is an offline alternative, you can use any model from huggingface to have different personas
 
