@@ -3,7 +3,7 @@ from neon_solvers import AbstractSolver
 
 
 class DialoGPTSolver(AbstractSolver):
-    # https://huggingface.co/models?p=8&sort=downloads&search=dialogpt
+    # https://huggingface.co/models?pipeline_tag=conversational&search=dialogpt
     personas = {
         "small": "microsoft/DialoGPT-small",
         "medium": "microsoft/DialoGPT-medium",
@@ -44,7 +44,7 @@ class DialoGPTSolver(AbstractSolver):
 
 
 if __name__ == "__main__":
-    bot = DialoGPTSolver()
+    bot = DialoGPTSolver({"model": "ingen51/DialoGPT-medium-GPT4"})
 
     sentence = bot.spoken_answer("Qual é o teu animal favorito?", {"lang": "pt-pt"})
     print(sentence)

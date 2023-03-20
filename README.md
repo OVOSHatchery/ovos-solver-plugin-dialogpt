@@ -2,9 +2,9 @@
  
 Give Mycroft some sass with DialoGPT
 
-While this can not compete with ChatGPT it is an offline alternative, you can use any model from huggingface to have different personas
+While this can not compete with [ChatGPT Persona](https://github.com/OpenVoiceOS/ovos-solver-plugin-openai-persona) it is an offline alternative, you can use any model from huggingface to have different personas
 
-https://huggingface.co/models?p=8&sort=downloads&search=dialogpt
+Find models [here](https://huggingface.co/models?pipeline_tag=conversational&search=dialogpt)
 
 ## Examples 
 * "What is best in life?"
