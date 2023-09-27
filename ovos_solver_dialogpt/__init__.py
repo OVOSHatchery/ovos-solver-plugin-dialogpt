@@ -1,8 +1,12 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from neon_solvers import AbstractSolver
+
+from ovos_plugin_manager.templates.solvers import QuestionSolver
 
 
-class DialoGPTSolver(AbstractSolver):
+class DialoGPTSolver(QuestionSolver):
+    enable_tx = True
+    priority = 95
+
     # https://huggingface.co/models?pipeline_tag=conversational&search=dialogpt
     personas = {
         "small": "microsoft/DialoGPT-small",
@@ -17,8 +21,7 @@ class DialoGPTSolver(AbstractSolver):
     }
 
     def __init__(self, config=None):
-        super().__init__(name="DialoGPT", priority=95, config=config,
-                         enable_cache=False, enable_tx=True)
+        super().__init__(config)
         checkpoint = self.config.get("model") or "microsoft/DialoGPT-medium"
         if checkpoint in self.personas:
             checkpoint = self.personas[checkpoint]
